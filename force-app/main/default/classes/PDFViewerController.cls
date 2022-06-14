@@ -1,5 +1,5 @@
 public with sharing class PDFViewerController {
-    @AuraEnabled(cacheable=true)
+    @AuraEnabled(cacheable=true scope='global')
     public static List<File> getRelatedPdfFilesByRecordId(String recordId) {
         // Get record file IDs
         List<ContentDocumentLink> files = [
